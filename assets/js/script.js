@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * navbar variables
@@ -10,12 +10,13 @@ const navbar = document.querySelector("[data-navbar]");
  * element toggle function
  */
 
-const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const elemToggleFunc = function (elem) {
+  elem.classList.toggle("active");
+};
 
-menuToggleBtn.addEventListener("click", function () { elemToggleFunc(navbar); });
-
-
-
+menuToggleBtn.addEventListener("click", function () {
+  elemToggleFunc(navbar);
+});
 
 /**
  * go to top
@@ -24,11 +25,9 @@ menuToggleBtn.addEventListener("click", function () { elemToggleFunc(navbar); })
 const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
-
   if (window.scrollY >= 800) {
     goTopBtn.classList.add("active");
   } else {
     goTopBtn.classList.remove("active");
   }
-
 });
